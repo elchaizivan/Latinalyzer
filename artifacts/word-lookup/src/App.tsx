@@ -10,10 +10,11 @@ function App() {
       <div className="flex h-screen flex-col overflow-hidden bg-background">
         <Navbar />
         <div className="min-h-0 flex-1 overflow-hidden">
-        <Switch>
-            <Route path="/" component={Home} />
+          <Switch>
+            <Route path="/" component={MorphologicalAnalyzer} />
             <Route path="/morphology" component={MorphologicalAnalyzer} />
             <Route path="/continuous-reading" component={ContinuousReading} />
+            <Route path="/word-lookup" component={Home} />
             <Route path="*">
               <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
                 Page not found.
