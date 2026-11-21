@@ -12,6 +12,7 @@ const MORPH_KEY = "morphology-projects-library";
 const READ_KEY = "continuous-reading-library";
 
 /** שומר את שתי הספריות מהמכשיר אל הענן עבור המשתמש המחובר */
+/** שומר את שתי הספריות מהמכשיר אל הענן עבור המשתמש המחובר */
 export async function syncLibraryToCloud() {
   if (!supabase) return;
   const {
@@ -29,7 +30,7 @@ export async function syncLibraryToCloud() {
       continuousReading: readRaw ? JSON.parse(readRaw) : { v: 1, projects: [], folders: [] },
     };
 
-    await supabase.from("user_libraries").upsert(
+    const { error } = await supabase.from("user_libraries").upsert(
       {
         user_id: user.id,
         data: payload,
@@ -37,8 +38,12 @@ export async function syncLibraryToCloud() {
       },
       { onConflict: "user_id" }
     );
-  } catch (err) {
-    console.error("Cloud sync upload failed:", err);
+
+    if (error) {
+      window.alert(`שגיאה בסנכרון לענן: ${error.message}`);
+    }
+  } catch (err: any) {
+    window.alert(`שגיאה בסנכרון: ${err?.message || err}`);
   }
 }
 
