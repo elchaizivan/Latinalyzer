@@ -1240,7 +1240,7 @@ export default function Home() {
 
   return (
     <div className="flex h-full flex-col bg-background">
-      <header className="relative z-20 shrink-0 border-b border-border bg-card px-4 py-4 sm:px-6">
+      <header className="relative z-20 shrink-0 border-b border-border bg-[#FAE5B9] px-4 py-4 sm:px-6">
         <div className="flex items-start gap-3 sm:gap-4">
           <div className="min-w-0 flex-1 pr-1">
             <h1 className="text-xl font-semibold tracking-tight text-foreground">
