@@ -1,5 +1,6 @@
 import type { MorphProject, MorphProjectFilePayload, MorphWord, MorphFolder } from "@/types/morphology";
 import { newMorphId, sanitizeFilenameBase } from "@/lib/morphology-utils";
+import { syncLibraryToCloud } from "@/lib/supabase";
 
 export const MORPH_PROJECTS_LIBRARY_KEY = "morphology-projects-library";
 export const CONTINUOUS_READING_LIBRARY_KEY = "continuous-reading-library";
