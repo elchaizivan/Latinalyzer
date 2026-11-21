@@ -667,7 +667,7 @@ const applyProjectData = useCallback(
       )}
       <div className="sticky top-0 z-50 bg-background/95 backdrop-blur shadow-sm" style={{ display: 'grid', gridTemplateRows: isHeaderVisible ? '1fr' : '0fr', transition: 'grid-template-rows 300ms ease-out' }}>
         <div className="overflow-hidden">
-          <header className="relative z-10 shrink-0 border-b border-border bg-card px-4 py-4 sm:px-6">
+          <header className="relative z-10 shrink-0 border-b border-border bg-[#FAE5B9] px-4 py-4 sm:px-6">
             <div className="flex items-start gap-3 sm:gap-4">
               <div className="min-w-0 flex-1 pr-1">
               <h1 className="text-xl font-semibold tracking-tight text-foreground">
