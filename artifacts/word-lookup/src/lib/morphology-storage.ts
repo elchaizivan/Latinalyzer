@@ -104,6 +104,7 @@ export function readMorphProjectsLibrary(): MorphProjectsLibrary {
 export function writeMorphProjectsLibrary(lib: MorphProjectsLibrary) {
   try {
     localStorage.setItem(MORPH_PROJECTS_LIBRARY_KEY, JSON.stringify(lib));
+    void syncLibraryToCloud();
   } catch {
     /* ignore */
   }
@@ -221,6 +222,7 @@ export function readContinuousReadingLibrary(): MorphProjectsLibrary {
 export function writeContinuousReadingLibrary(lib: MorphProjectsLibrary) {
   try {
     localStorage.setItem(CONTINUOUS_READING_LIBRARY_KEY, JSON.stringify(lib));
+    void syncLibraryToCloud();
   } catch {
     /* ignore */
   }
