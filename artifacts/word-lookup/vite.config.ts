@@ -45,9 +45,10 @@ export default defineConfig({
         enabled: true,
       },
       manifest: {
-        name: "Word Lookup",
-        short_name: "Dict",
-        theme_color: "#ffffff",
+        name: "Latinalyzer",
+        short_name: "Latinalyzer",
+        theme_color: "#1b3022",
+        background_color: "#1b3022",
         start_url: manifestScope,
         scope: manifestScope,
         display: "standalone",
